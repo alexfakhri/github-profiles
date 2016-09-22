@@ -12,8 +12,27 @@
       <button type="submit" id="fetch-profile">Fetch Profile</button>
     </form>
 
+    <template id="profileTemplate">
+      <article>
+        <div class='image'>
+          <img src="{{avatar_url}}"/>
+        </div>
+        <div class='profile-details'>
+          <h1>{{name}}</h1>(<a href='{{html_url}}'>{{login}}</a>)
+          <h2>{{location}}</h2>
+          <h2>{{email}}</h2>
+        <p>
+          <strong id='followers'>{{followers}} followers</strong>
+          <strong id='repos'>{{public_repos}} public repos</strong>
+        </p>
+        </div>
+    </article>
+
+    </template>
+
 
     <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script src="handlebars.js"></script>
     <script src="interface.js"></script>
   </body>
 </html>
