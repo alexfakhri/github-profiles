@@ -7,10 +7,14 @@
 
   <body>
 
-    <form id="profile-search">
-      <input id='username' placeholder="Enter a Github username">
-      <button type="submit" id="fetch-profile">Fetch Profile</button>
-    </form>
+    <main>
+      <form id="profile-search">
+        <input id='username' placeholder="Enter a Github username">
+        <button type="submit" id="fetch-profile">Fetch Profile</button>
+      </form>
+
+      <section id='profile'></section>
+    </main>
 
     <template id="profileTemplate">
       <article>
@@ -21,15 +25,13 @@
           <h1>{{name}}</h1>(<a href='{{html_url}}'>{{login}}</a>)
           <h2>{{location}}</h2>
           <h2>{{email}}</h2>
-        <p>
-          <strong id='followers'>{{followers}} followers</strong>
-          <strong id='repos'>{{public_repos}} public repos</strong>
-        </p>
+          <p>
+          <div id='followers'>{{followers}} followers</div>
+          <div id='repos'>{{public_repos}} public repos</div>
+          </p>
         </div>
-    </article>
-
+      </article>
     </template>
-
 
     <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
     <script src="handlebars.js"></script>
