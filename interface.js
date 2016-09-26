@@ -6,5 +6,6 @@ $('#fetch-profile').click(function(event){
   var profile = 'https://api.github.com/users/' + username +'?client_id=?270ae81c14074e2c3045&client_secret=2ec458a20ed0a813fd47436f859b1fc5e260d78e';
   $.get(profile, function(user){
     $('#profile').append(template(user));
+    console.log(user);
   });
 });
